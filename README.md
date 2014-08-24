@@ -23,7 +23,7 @@ We use **read.table()** to do this because those are .txt files
 ---------------------------------------------
 2) Creates a single file for training information and for test information
 ----------
-Now we have training and test information subsetted by sets, activities and subject. So in each case we put all together to leave one set for traininf information and one for test information.
+Now we have training and test information subsetted by sets, activities and subjects. So in each case we put all together to leave one set for training information and one for test information.
 We use **cbind()** to combine them by columns.
 
     trainData <- cbind(train_subjects, train_labels, train_set)
@@ -32,7 +32,7 @@ We use **cbind()** to combine them by columns.
 3) Merges both training and test information
 ----------
 We merge both data frames in order to have all 30 volunteers in one single data frame.
-We use **rbind()** to combine them by columns.
+We use **rbind()** to combine them by rows.
 
     Data <- rbind(testData, trainData)
 --------------------------------------------
